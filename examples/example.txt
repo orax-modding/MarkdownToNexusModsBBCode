@@ -1,0 +1,416 @@
+[size=6][b][color=#FFD479]Markdown to Nexus Mods BBCode - Example document[/b][/color][/size]
+
+This document tests the conversion from [b]GitHub Flavored Markdown (GFM)[/b] to [b]Nexus Mods[/b] BBCode.
+
+[list]
+[*]Bold, italic, strikethrough, links, images, lists, tables and code blocks should be converted correctly.
+[*]YouTube links should become Nexus Mods [font=Courier New][ youtube ][/font] tags.
+[*]Unsupported elements should be identified and handled consistently.
+[/list]
+
+[line]
+
+[size=5][b][color=#FFA58A]🏷️ Headings[/b][/color][/size]
+
+[size=6][b][color=#FFD479]Heading level 1[/b][/color][/size]
+
+[size=5][b][color=#FFA58A]Heading level 2[/b][/color][/size]
+
+[size=4][b][color=#84E6C4]Heading level 3[/b][/color][/size]
+
+[size=3][b][color=#7DC4FF]Heading level 4[/b][/color][/size]
+
+[size=2][b][color=#C4A8FF]Heading level 5[/b][/color][/size]
+
+[size=1][b][color=#FF92B8]Heading level 6[/b][/color][/size]
+
+[size=6][b][color=#FFD479]Heading level 1[/b][/color][/size]
+
+[size=5][b][color=#FFA58A]Heading level 2[/b][/color][/size]
+
+[size=5][b][color=#FFA58A]🏷️ Paragraphs and line breaks[/b][/color][/size]
+
+This is a simple paragraph.
+
+This is another paragraph separated by a blank line.
+
+This line ends with two spaces
+so the next line should be a hard line break.
+
+This line ends with a backslash so the next line should also be a hard line break.
+
+This paragraph contains multiple source lines that should normally be rendered as soft line breaks.
+
+[size=5][b][color=#FFA58A]🏷️ Inline formatting[/b][/color][/size]
+
+Normal text, [b]bold text[/b], [i]italic text[/i], [b][i]bold and italic text[/i][/b].
+
+This is [s]strikethrough text[/s].
+
+This is [font=Courier New]inline code[/font].
+
+This combines [b]bold with [i]nested italic[/i][/b] formatting.
+
+This is a [url=https://www.nexusmods.com/]link to Nexus Mods[/url].
+
+This is an automatic link: [url=https://www.nexusmods.com/]https://www.nexusmods.com/[/url]
+
+This is an email autolink: [url=mailto:test@example.com]test@example.com[/url]
+
+This is a link with a title: [url=https://www.nexusmods.com/]Nexus Mods[/url].
+
+This is a link containing [b]bold text[/b]: [url=https://www.nexusmods.com/][b]Nexus Mods[/b][/url].
+
+[size=5][b][color=#FFA58A]🏷️ Escaping special characters[/b][/color][/size]
+
+These characters should remain literal when escaped:
+
+*asterisks*
+
+_underscores_
+
+`backticks`
+
+[brackets]
+
+# hash
+
+\ backslash
+
+[size=5][b][color=#FFA58A]🏷️ Unordered lists[/b][/color][/size]
+
+[list]
+[*]First item
+[*]Second item
+[*]Third item
+[/list]
+
+Alternative bullet markers:
+
+[list]
+[*]Item using an asterisk
+[*]Another item
+[/list]
+
+[list]
+[*]Item using a plus sign
+[*]Another item
+[/list]
+
+[size=5][b][color=#FFA58A]🏷️ Ordered lists[/b][/color][/size]
+
+[list=1]
+[*]First item
+[*]Second item
+[*]Third item
+[/list]
+
+Lists starting with another number:
+
+[list=1]
+[*]Third
+[*]Fourth
+[*]Fifth
+[/list]
+
+Lists using parentheses:
+
+[list=1]
+[*]First item
+[*]Second item
+[*]Third item
+[/list]
+
+[size=5][b][color=#FFA58A]🏷️ Nested lists[/b][/color][/size]
+
+[list]
+[*]Main item 1
+
+[list]
+[*]Nested item 1.1
+[*]Nested item 1.2
+
+[list]
+[*]Nested item 1.2.1
+[/list]
+[/list]
+[*]Main item 2
+
+[list]
+[*]Nested item 2.1
+[/list]
+[/list]
+
+[list=1]
+[*]First main item
+
+[list=1]
+[*]First nested item
+[*]Second nested item
+[/list]
+[*]Second main item
+[/list]
+
+[size=5][b][color=#FFA58A]🏷️ Task lists[/b][/color][/size]
+
+[list]
+[*]☐ Unchecked task
+[*]☒ Completed task
+[*]☒ Completed task using uppercase X
+[*]☐ Task containing [b]bold text[/b]
+[*]☒ Task containing a [url=https://www.nexusmods.com/]link[/url]
+[/list]
+
+[size=5][b][color=#FFA58A]🏷️ Block quotes[/b][/color][/size]
+
+[quote]
+This is a simple block quote.
+[/quote]
+
+[quote]
+This quote contains [b]bold text[/b] and [i]italic text[/i].
+
+It also contains a second paragraph.
+[/quote]
+
+[quote]
+Nested quote:
+
+[quote]
+This is a nested block quote.
+
+It contains multiple paragraphs.
+[/quote]
+[/quote]
+
+[size=5][b][color=#FFA58A]🏷️ Horizontal rules[/b][/color][/size]
+
+First section.
+
+[line]
+
+Second section.
+
+[line]
+
+Third section.
+
+[line]
+
+Fourth section.
+
+[size=5][b][color=#FFA58A]🏷️ Code blocks[/b][/color][/size]
+
+Inline code: [font=Courier New]print("Hello, world!")[/font]
+
+[size=4][b][color=#84E6C4]Fenced code block[/b][/color][/size]
+
+[code]local message = "Hello, world!"
+print(message)[/code]
+
+[size=4][b][color=#84E6C4]Code block with another language[/b][/color][/size]
+
+[code]$version = "1.0.0"
+Write-Output $version[/code]
+
+[size=4][b][color=#84E6C4]Code block containing backticks[/b][/color][/size]
+
+[code]```lua
+print("This contains backticks")
+```[/code]
+
+[size=4][b][color=#84E6C4]Empty code block[/b][/color][/size]
+
+[code][/code]
+
+[size=5][b][color=#FFA58A]🏷️ Links[/b][/color][/size]
+
+[size=4][b][color=#84E6C4]Standard links[/b][/color][/size]
+
+[url=https://www.nexusmods.com/]Nexus Mods[/url]
+
+[url=https://github.com/]GitHub[/url]
+
+[url=https://github.github.com/gfm/]GitHub Flavored Markdown specification[/url]
+
+[size=4][b][color=#84E6C4]Reference links[/b][/color][/size]
+
+[url=https://www.nexusmods.com/]First reference[/url]
+
+[url=https://github.com/]Second reference[/url]
+
+[size=4][b][color=#84E6C4]Autolinks[/b][/color][/size]
+
+[url=https://www.nexusmods.com/]https://www.nexusmods.com/[/url]
+
+[url=https://github.com/]https://github.com/[/url]
+
+[url=mailto:test@example.com]mailto:test@example.com[/url]
+
+[size=4][b][color=#84E6C4]URL with query parameters[/b][/color][/size]
+
+[url=https://example.com/search?q=valheim&sort=date]Search example[/url]
+
+[size=5][b][color=#FFA58A]🏷️ YouTube links[/b][/color][/size]
+
+[size=4][b][color=#84E6C4]Standard YouTube URL[/b][/color][/size]
+
+[youtube]NpEaa2P7qZI[/youtube]
+
+[size=4][b][color=#84E6C4]YouTube URL with additional parameters[/b][/color][/size]
+
+[youtube]NpEaa2P7qZI[/youtube]
+
+[size=4][b][color=#84E6C4]Short YouTube URL[/b][/color][/size]
+
+[youtube]NpEaa2P7qZI[/youtube]
+
+[size=4][b][color=#84E6C4]YouTube embed URL[/b][/color][/size]
+
+[youtube]NpEaa2P7qZI[/youtube]
+
+[size=4][b][color=#84E6C4]YouTube live URL[/b][/color][/size]
+
+[youtube]NpEaa2P7qZI[/youtube]
+
+[size=4][b][color=#84E6C4]YouTube no-cookie URL[/b][/color][/size]
+
+[youtube]NpEaa2P7qZI[/youtube]
+
+[size=4][b][color=#84E6C4]Text links to YouTube (without preview)[/b][/color][/size]
+
+[url=https://youtu.be/NpEaa2P7qZI]Watch the video[/url]
+
+[url=https://www.youtube.com/watch?v=NpEaa2P7qZI]Watch the video on YouTube[/url]
+
+[size=4][b][color=#84E6C4]YouTube link with surrounding text[/b][/color][/size]
+
+Watch this tutorial: [youtube]NpEaa2P7qZI[/youtube] and follow the instructions.
+
+[size=4][b][color=#84E6C4]YouTube URL inside a paragraph[/b][/color][/size]
+
+The video [youtube]NpEaa2P7qZI[/youtube] explains the feature.
+
+[size=5][b][color=#FFA58A]🏷️ Images[/b][/color][/size]
+
+[size=4][b][color=#84E6C4]Standard image[/b][/color][/size]
+
+[img]https://placehold.co/100[/img]
+
+[size=4][b][color=#84E6C4]Image with alt text[/b][/color][/size]
+
+[img]https://placehold.co/100[/img]
+
+[size=4][b][color=#84E6C4]Linked image[/b][/color][/size]
+
+[url=https://www.nexusmods.com/][img]https://placehold.co/100[/img][/url]
+
+[size=4][b][color=#84E6C4]Image reference[/b][/color][/size]
+
+[img]https://placehold.co/100[/img]
+
+[size=5][b][color=#FFA58A]🏷️ Tables[/b][/color][/size]
+
+[size=4][b][color=#84E6C4]Simple table[/b][/color][/size]
+
+[table]
+[tr][th]Feature[/th][th]Supported[/th][th]Description[/th][/tr]
+[tr][td]Bold[/td][td]Yes[/td][td]Strong emphasis[/td][/tr]
+[tr][td]Italic[/td][td]Yes[/td][td]Emphasis[/td][/tr]
+[tr][td]Links[/td][td]Yes[/td][td]Clickable URLs[/td][/tr]
+[tr][td]Images[/td][td]Yes[/td][td]Embedded images[/td][/tr]
+[/table]
+
+[size=4][b][color=#84E6C4]Table containing formatting[/b][/color][/size]
+
+[table]
+[tr][th]Element[/th][th]Example[/th][/tr]
+[tr][td]Bold[/td][td][b]Bold text[/b][/td][/tr]
+[tr][td]Italic[/td][td][i]Italic text[/i][/td][/tr]
+[tr][td]Strikeout[/td][td][s]Removed text[/s][/td][/tr]
+[tr][td]Code[/td][td][font=Courier New]print("test")[/font][/td][/tr]
+[tr][td]Link[/td][td][url=https://www.nexusmods.com/]Nexus Mods[/url][/td][/tr]
+[/table]
+
+[size=4][b][color=#84E6C4]Table containing pipes[/b][/color][/size]
+
+[table]
+[tr][th]Expression[/th][th]Meaning[/th][/tr]
+[tr][td][font=Courier New]a | b[/font][/td][td]A literal pipe[/td][/tr]
+[tr][td][font=Courier New]x | y[/font][/td][td]Another literal pipe[/td][/tr]
+[/table]
+
+[size=5][b][color=#FFA58A]🏷️ Special characters and entities[/b][/color][/size]
+
+Ampersand: &
+
+Less than: <
+
+Greater than: >
+
+Copyright: ©
+
+Registered trademark: ®
+
+Euro: €
+
+Unicode: é, è, à, ç, œ, Ж, 漢字, 日本語.
+
+Emoji: 😀 🎮 ⚔️ 🛡️ 🔥
+
+[size=5][b][color=#FFA58A]🏷️ Complex combinations[/b][/color][/size]
+
+[b]Bold text containing a [url=https://www.nexusmods.com/]link[/url].[/b]
+
+[i]Italic text containing [font=Courier New]inline code[/font].[/i]
+
+[s]Strikethrough containing a [url=https://www.nexusmods.com/]link[/url].[/s]
+
+[quote]
+A quote containing [b]bold[/b], [i]italic[/i], and a [url=https://www.nexusmods.com/]link[/url].
+[/quote]
+
+[list]
+[*]List item with [b]bold text[/b]
+[*]List item with [i]italic text[/i]
+[*]List item with [font=Courier New]inline code[/font]
+[*]List item with a [url=https://www.nexusmods.com/]link[/url]
+[/list]
+
+[list=1]
+[*]First item with a nested list:
+
+[list]
+[*]Nested [b]bold[/b] item
+[*]Nested [i]italic[/i] item
+[/list]
+[*]Second item containing a [url=https://www.nexusmods.com/]link[/url]
+[/list]
+
+[size=5][b][color=#FFA58A]🏷️ Empty and edge cases[/b][/color][/size]
+
+An empty link label: [url=https://www.nexusmods.com/][/url]
+
+An empty image alt text: [img]https://placehold.co/100[/img]
+
+An empty inline code span: ``
+
+A paragraph containing only a URL:
+
+[youtube]NpEaa2P7qZI[/youtube]
+
+A paragraph containing punctuation after a URL:
+
+[youtube]NpEaa2P7qZI[/youtube].
+
+A paragraph containing parentheses after a URL:
+
+([youtube]NpEaa2P7qZI[/youtube])
+
+A URL with a fragment:
+
+[url=https://example.com/page#section]https://example.com/page#section[/url]
+
+[line]
+
+[size=5][b][color=#FFA58A]End of test document[/b][/color][/size]

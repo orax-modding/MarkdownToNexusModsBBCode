@@ -1,0 +1,19 @@
+{
+    "workspace": {
+        "library": [
+            "types"
+        ]
+    },
+    "diagnostics": {
+        "globals": [
+            "pandoc",
+            "FORMAT",
+            "PANDOC_VERSION",
+            "PANDOC_API_VERSION",
+            "PANDOC_SCRIPT_FILE",
+            "PANDOC_STATE",
+            "lpeg",
+            "re"
+        ]
+    }
+}
