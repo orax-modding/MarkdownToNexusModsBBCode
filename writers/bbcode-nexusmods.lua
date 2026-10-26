@@ -4,6 +4,11 @@ local BBCODE_FORMAT = "bbcode"
 local MIN_HEADER_LEVEL = 1
 local MAX_HEADER_LEVEL = 6
 local HEADING_SIZES = { 6, 5, 4, 3, 2, 1 }
+local writerDirectory = pandoc.path.directory(PANDOC_SCRIPT_FILE)
+
+if writerDirectory == "" then
+	writerDirectory = "."
+end
 
 -- Compile a pattern to match YouTube URLs and capture the exact 11-character video ID.
 -- Documentation:
@@ -26,16 +31,23 @@ local youtubePattern = re.compile([[
 ---@return table
 local function loadConfig(opts)
 	local config = opts.variables.config
-	local path = (config and tostring(config)) or "config/default.lua"
+	local path = (config and tostring(config)) or "../config/default.lua"
 
-	local file = io.open(path)
-	if file then
-		file:close()
-	else
-		error("The option file does not exist: " .. path)
+	-- Keep user-supplied relative paths relative to the caller's working directory.
+	if config and pandoc.path.is_relative(path) then
+		path = pandoc.path.join({ pandoc.system.get_working_directory(), path })
 	end
 
-	return dofile(path)
+	return pandoc.system.with_working_directory(writerDirectory, function()
+		local file = io.open(path)
+		if file then
+			file:close()
+		else
+			error("The option file does not exist: " .. path)
+		end
+
+		return dofile(path)
+	end)
 end
 
 ---Try to extract the YouTube video ID from a URL.
