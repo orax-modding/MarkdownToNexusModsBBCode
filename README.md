@@ -3,6 +3,14 @@
 This tool converts Markdown to the BBCode dialect used by [Nexus Mods](https://www.nexusmods.com).
 The conversion is built on Pandoc's native `bbcode` writer, with a custom writer written in Lua.
 
+## Example
+
+Example conversion of the `example.md` file (from `MarkdownToNexusModsBBCode.zip`):
+https://www.nexusmods.com/site/articles/261
+
+_Note: Emojis have been replaced because certain emojis currently trigger a 500 error when saving
+articles._
+
 ## Clone the repository
 
 ```shell
