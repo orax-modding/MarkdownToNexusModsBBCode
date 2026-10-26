@@ -1,0 +1,8 @@
+config/default.lua
+examples/example.md
+examples/example.txt
+MarkdownToNexusModsBBCode.bat
+MarkdownToNexusModsBBCode.code-workspace
+MarkdownToNexusModsBBCode.ps1
+README.md
+writers/bbcode-nexusmods.lua
